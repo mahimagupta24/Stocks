@@ -22,6 +22,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
     var loss = (initial - current) * quantity;
     var lossPercentage = (loss / initial) * 100;
     outputBox.style.color = "red";
+    outputBox.style.fontSize ="large";
     showOutput(
       `You are having a loss of ${loss} and the percent is ${lossPercentage.toFixed(2)}%`
     );
@@ -29,6 +30,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
     var profit = (current - initial) * quantity;
     var profitPercentage = (profit / initial) * 100;
     outputBox.style.color = "green";
+    outputBox.style.fontSize ="large";
     showOutput(
       `You are having a profit of ${profit} and the percent is ${profitPercentage.toFixed(2)}%`
     );
