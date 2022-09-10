@@ -1,44 +1,42 @@
-var initialPrice = document.querySelector("#initial-price");
-var stocksQuantity = document.querySelector("#stocks-quantity");
-var currentPrice = document.querySelector("#current-price");
-var submitBtn = document.querySelector("#submit-btn");
-var outputBox = document.querySelector("#output-box");
+var initialPrice = document.querySelector(".initial-price");
+var quantityStocks = document.querySelector(".quantity-stocks");
+var currentPrice = document.querySelector(".current-price");
+var button = document.querySelector(".btn");
+var output = document.querySelector(".output");
 
-submitBtn.addEventListener("click", submitHandler);
+button.addEventListener("click", handleClick);
 
-function submitHandler() {
+function handleClick() {
   var ip = Number(initialPrice.value);
-  var qty = Number(stocksQuantity.value);
-  var curr = Number(currentPrice.value);
-  if(ip == '' || qty == '' || curr == ''){
-    alert("Please fill out all Fields");
-  } else {
-    calculateProfitAndLoss(ip, qty, curr);
-  }
+  var qty = Number(quantityStocks.value);
+  var cp = Number(currentPrice.value);
+  if(ip == "" || qty == "" || cp == ""){
+    alert("please fill all fields")
+  }else{
+  calculateProfitAndLoss(ip, qty, cp);
 }
-
+}
 function calculateProfitAndLoss(initial, quantity, current) {
-  if (initial > current) {
-    var loss = (initial - current) * quantity;
-    var lossPercentage = (loss / initial) * 100;
-    outputBox.style.color = "red";
-    outputBox.style.fontSize ="large";
-    showOutput(
-      `You are having a loss of ${loss} and the percent is ${lossPercentage.toFixed(2)}%`
-    );
-  } else if (current > initial) {
+  if (current > initial) {
     var profit = (current - initial) * quantity;
     var profitPercentage = (profit / initial) * 100;
-    outputBox.style.color = "green";
-    outputBox.style.fontSize ="large";
-    showOutput(
-      `You are having a profit of ${profit} and the percent is ${profitPercentage.toFixed(2)}%`
-    );
+    output.innerText =
+      "Hey, the profit is " +
+      profit +
+      " and the percent is " +
+      profitPercentage.toFixed(2);
+    output.style.color = "green";
+  } else if (initial > current) {
+    var loss = (initial - current) * quantity;
+    var lossPercentage = (loss / initial) * 100;
+    output.innerText =
+      "Hey, the loss is " +
+      loss +
+      " and the percent is " +
+      lossPercentage.toFixed(2);
+    output.style.color = "red";
   } else {
-    outputBox.style.color = "orange";
-    showOutput("No pain,no gain and no gain,no pain");
+    output.innerText = "No pain no gain and no gain no pain";
+    output.style.color = "blue";
   }
-}
-function showOutput(message) {
-  outputBox.innerHTML = message;
 }
