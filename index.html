@@ -8,15 +8,19 @@
     <title>Profit And Loss Calculator</title>
 </head>
 <body>
-    <h1>Profit And Loss Calculator</h1>
-    <main>
-        <label for="initial-price">
-            Initial Price<input type="number"id="initial-price" placeholder="Enter Initial Price Here"></label>
-        <label for="stocks-quantity">Quantity of Stocks<input type="number"id="stocks-quantity"placeholder="Enter the Number of Stocks bought"></label>
-        <label for="current-price">Current Price<input type="number"id="current-price"placeholder="Enter the Current price of the stocks"id=""></label>
-        <button id="submit-btn">Tell Me!</button>
-        <div id="output-box"></div>
-        <script class="index.js"></script>
+    <header>
+        <h1>Stock Profit & Loss Calculator</h1>
+        </header>
+        <main>
+        <label class="input-label" for="initial-price">Initial Price</label>
+        <input type="number" class="initial-price input" placeholder="Enter initial price here" />
+        <label class="input-label" for="quantity-stocks">Quantity of Stocks</label>
+        <input type="number" class="quantity-stocks input" placeholder="Enter the number of stocks bought" />
+        <label class="input-label" for="current-price">Current Price</label>
+        <input type="number" class="current-price input" placeholder="Enter the current price of stocks" />
+        <button class="btn">Tell Me!</button>
+        <div class="output"></div>
+        
     </main>
     <footer>
         <p>Contact me</p>
@@ -39,5 +43,6 @@
             </li>
         </ul>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
