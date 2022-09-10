@@ -26,4 +26,15 @@ label{
     margin-top:0.5rem;
     font-size: medium;
 }
+img{
+    width:40px;
+}
+a,
+img,
+li {
+  display: inline;
+}
+footer p{
+    font-size: large;
+}
 
