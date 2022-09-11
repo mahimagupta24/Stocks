@@ -37,6 +37,13 @@ li {
   display: inline;
   padding: 0.2rem;
 }
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 footer p{
     font-size: larger;
 }
