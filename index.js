@@ -12,7 +12,11 @@ function handleClick() {
   var cp = Number(currentPrice.value);
   if(ip == "" || qty == "" || cp == ""){
     alert("please fill all fields")
-  }else{
+  }else if(ip<=0||qty<=0||cp<=0){
+    alert("input should be greater than zero")
+  }
+  
+  else{
   calculateProfitAndLoss(ip, qty, cp);
 }
 }
