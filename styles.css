@@ -28,6 +28,14 @@ button{
     margin-top:1rem;
     font-size: large;
 }
+footer {
+    text-align: center;
+  }
+footer p{
+    text-align: center;
+    font-size: x-large;
+}
+
 img{
     width:40px;
 }
@@ -36,15 +44,5 @@ img,
 li {
   display: inline;
   padding: 0.2rem;
-}
-footer {
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-footer p{
-    font-size: larger;
 }
 
